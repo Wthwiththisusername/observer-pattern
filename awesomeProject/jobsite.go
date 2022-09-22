@@ -42,7 +42,7 @@ func (j *jobSite) sendAll() { // from observable
 		subscribers.handleEvent(j.vacancies)
 	}
 }
-func removeFromslice[T any](s []T, i int) ([]T, error) { // generics
+func removeFromslice[Observer any](s []Observer, i int) ([]Observer, error) {
 	if i >= len(s) || i < 0 {
 		return nil, fmt.Errorf("Something goes wrong with index %d with length %d ", i, len(s))
 	}
